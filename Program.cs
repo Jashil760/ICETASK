@@ -59,12 +59,26 @@ namespace ICE_Task
         }
 
     }
+    
+    
+    public class Square : Shape
+    {
+        private double length;
+
+        public Square(double length)
+        { 
+            this.length = length;
+        }
+        public override double Area()
+        { 
+            return length*length;
+        }
     }
     internal class Program
     {
         static void Main(string[] args)
         {
-        Shape[] sh = { new Circle(5), new Rectangle(4, 6), new Triangle(3, 8) };
+        Shape[] sh = { new Circle(5), new Rectangle(4, 6), new Triangle(3, 8),new Shape(7) };
         foreach (Shape shape in sh)
         { 
             Console.WriteLine("Area of shape: " + shape.Area());
